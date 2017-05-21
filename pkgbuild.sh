@@ -21,6 +21,8 @@ done < <(comm -23 <(pacman -Sl "aurci" | cut -d" " -f2 | sort) <(aurchain ${pkgl
 cd ".."
 
 # Build outdated packages.
+# cower
+gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53
 aursync --repo "aurci" --root "bin" -nr ${pkglist[@]}
 
 { set +ex; } 2>/dev/null
