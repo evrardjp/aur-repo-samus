@@ -6,6 +6,8 @@ RUN pacman -Syu --noconfirm
 # Clear cache.
 RUN pacman -Scc --noconfirm
 
+RUN gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53
+
 # Create an unprivileged user.
 RUN useradd -m -G wheel -s /bin/bash pkguser
 
