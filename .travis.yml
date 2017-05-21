@@ -2,7 +2,7 @@ services:
   - docker
 
 env:
-  - TRAVIS_TAG=repository
+  - TRAVIS_TAG=repo
 
 before_install:
   - docker build -t localnet/aurci .
@@ -26,7 +26,7 @@ deploy:
   provider: releases
   api_key: ${GITHUB_TOKEN}
   file_glob: true
-  file: repository/*{db,files,gz,xz}
+  file: repo/*{db,files,gz,xz}
   overwrite: true
   skip_cleanup: true
   on:

@@ -7,7 +7,7 @@ declare pkgslug="${1}"
 
 # Download or create repository database repository "aurci"
 cd "bin"
-if curl -f -L "https://github.com/${pkgslug}/releases/download/repository/aurci.{db,files}.tar.gz" -o "aurci.#1.tar.gz"; then
+if curl -f -L "https://github.com/${pkgslug}/releases/download/repo/aurci.{db,files}.tar.gz" -o "aurci.#1.tar.gz"; then
   ln -s "aurci.db.tar.gz" "aurci.db"
   ln -s "aurci.files.tar.gz" "aurci.files"
 else
@@ -26,11 +26,14 @@ CleanMethod = KeepCurrent
 [aurci]
 SigLevel = Optional TrustAll
 Server = file:///home/pkguser/bin
-Server = https://github.com/${pkgslug}/releases/download/repository
+Server = https://github.com/${pkgslug}/releases/download/repo
 EOF
 
 # Add repository "aurutilsci" and incude "aurci".
 sudo tee -a "/etc/pacman.conf" << EOF
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
 
 [aurutilsci]
 SigLevel = Optional TrustAll
