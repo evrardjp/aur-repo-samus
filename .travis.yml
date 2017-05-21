@@ -20,7 +20,7 @@ script:
   - docker exec aurci bash pkgbuild.sh ${TRAVIS_REPO_SLUG} ${TRAVIS_BUILD_ID}
 
 before_deploy:
-  - docker cp aurci:/home/pkguser/bin repository
+  - docker cp aurci:/home/pkguser/bin repo
 
 deploy:
   provider: releases
