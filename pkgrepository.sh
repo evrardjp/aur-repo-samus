@@ -37,7 +37,7 @@ Include = /etc/pacman.d/mirrorlist
 
 [aurutilsci]
 SigLevel = Optional TrustAll
-Server = https://github.com/localnet/aurutilsci/releases/download/repository
+Server = https://github.com/cromerc/aurutilsci/releases/download/repo
 
 Include = /etc/pacman.d/aurci
 EOF
