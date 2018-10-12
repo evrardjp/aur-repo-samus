@@ -1,11 +1,11 @@
 language: generic
 env:
-  - TRAVIS_TAG=repository
+  - TRAVIS_TAG=desktop
 services:
   - docker
 before_install:
-  - docker build -t localnet/aurci .
-  - docker run -d -t --name aurci localnet/aurci bash
+  - docker build -t evrardjp/aurci .
+  - docker run -d -t --name aurci evrardjp/aurci bash
 install:
   - docker cp pkgrepository.sh aurci:/home/pkguser
   - docker cp pkgbuild.sh aurci:/home/pkguser
@@ -25,4 +25,4 @@ deploy:
   overwrite: true
   skip_cleanup: true
   on:
-    branch: master
+    branch: desktop
