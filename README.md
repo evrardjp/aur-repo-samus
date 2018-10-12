@@ -1,22 +1,23 @@
-# aurci [![Build Status](https://travis-ci.org/localnet/aurci.svg?branch=master)](https://travis-ci.org/localnet/aurci)
+# Chromebook Pixel 2015 Packages
+[![Build Status](https://travis-ci.com/evrardjp/aurci.svg?branch=samus)](https://travis-ci.com/evrardjp/aurci)
 
-Use [Travis CI](https://travis-ci.org/localnet/aurci) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/localnet/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
+Use [Travis CI](https://travis-ci.com/evrardjp/aurci) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/evrardjp/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
 
 ## Use repository
 
 To use as custom repository in [Arch Linux](https://www.archlinux.org), add to file `/etc/pacman.conf`:
 
 ```
-[aurci]
+[aur-samus]
 SigLevel = Optional TrustAll
-Server = https://github.com/localnet/aurci/releases/download/repository
+Server = https://github.com/evrardjp/aurci/releases/download/samus
 ```
 
 Then on the command line:
 
 ```
 pacman -Sy            # Refresh package database.
-pacman -Sl aurci      # Show packages in repository.
+pacman -Sl aur-samus  # Show packages in repository.
 pacman -S {package}   # Install a package.
 ```
 
@@ -24,7 +25,7 @@ pacman -S {package}   # Install a package.
 
 ## Forking repository
 
-For build the [AUR](https://aur.archlinux.org) packages of your election fork this repository and enable [Travis CI](https://travis-ci.org):
+For build the [AUR](https://aur.archlinux.org) packages of your election fork this repository and enable [Travis CI](https://travis-ci.com):
 
   - Fork this GitHub repository and edit `pkglist`.
   - Generate a personal access token with scope `public_repo`.
