@@ -1,6 +1,6 @@
-# aurci [![Build Status](https://travis-ci.org/evrardjp/aurci.svg?branch=master)](https://travis-ci.org/evrardjp/aurci)
+# aurci [![Build Status](https://travis-ci.com/evrardjp/aurci.svg?branch=evrardjp-fork)](https://travis-ci.com/evrardjp/aurci)
 
-Use [Travis CI](https://travis-ci.org/evrardjp/aurci) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/evrardjp/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
+Use [Travis CI](https://travis-ci.com/evrardjp/aurci) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/evrardjp/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
 
 ## Use repository
 
@@ -24,7 +24,7 @@ pacman -S {package}   # Install a package.
 
 ## Forking repository
 
-For build the [AUR](https://aur.archlinux.org) packages of your election fork this repository and enable [Travis CI](https://travis-ci.org):
+For build the [AUR](https://aur.archlinux.org) packages of your election fork this repository and enable [Travis CI](https://travis-ci.com):
 
   - Fork this GitHub repository and edit `pkglist`.
   - Generate a personal access token with scope `public_repo`.
