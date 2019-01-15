@@ -33,6 +33,6 @@ for pkgkey in ${pkgkeys[@]}; do
 done
 
 # Build outdated packages.
-aursync --repo $pkgrepo --root "bin" -nr ${pkglist[@]}
+aur sync -d $pkgrepo -n ${pkglist[@]}
 
 { set +ex; } 2>/dev/null
