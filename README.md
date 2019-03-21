@@ -1,5 +1,5 @@
-# Chromebook Pixel 2015 Packages
-[![Build Status](https://travis-ci.com/evrardjp/aurci.svg?branch=samus)](https://travis-ci.com/evrardjp/aurci)
+# Kubernetes Packages
+[![Build Status](https://travis-ci.com/evrardjp/aurci.svg?branch=k8s)](https://travis-ci.com/evrardjp/aurci)
 
 Use [Travis CI](https://travis-ci.com/evrardjp/aurci) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/evrardjp/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
 
@@ -8,20 +8,21 @@ Use [Travis CI](https://travis-ci.com/evrardjp/aurci) for building and packaging
 To use as custom repository in [Arch Linux](https://www.archlinux.org), add to file `/etc/pacman.conf`:
 
 ```
-[aur-samus]
+[aur-k8s]
 SigLevel = Optional TrustAll
-Server = https://github.com/evrardjp/aurci/releases/download/samus
+Server = https://github.com/evrardjp/aurci/releases/download/k8s
 ```
 
 Then on the command line:
 
 ```
 pacman -Sy            # Refresh package database.
-pacman -Sl aur-samus  # Show packages in repository.
+pacman -Sl aur-k8s  # Show packages in repository.
 pacman -S {package}   # Install a package.
 ```
 
 **NOTE:** List of currently maintained packages can change at any moment.
+Check pkglist file for the packages list.
 
 ## Forking repository
 

@@ -1,4 +1,9 @@
-mxt-app-git
-samus-scripts
-pikaur
-#ectool-samus-git
+# k3s
+k3s-bin
+# clients
+kubectl
+click
+# Weave Flux
+fluxctl-bin
+# Velero (Heptio Ark) backup
+velero-bin

@@ -1,6 +1,6 @@
 language: generic
 env:
-  - TRAVIS_TAG=samus
+  - TRAVIS_TAG=k8s
 services:
   - docker
 before_install:
@@ -25,4 +25,4 @@ deploy:
   overwrite: true
   skip_cleanup: true
   on:
-    branch: samus
+    branch: k8s
