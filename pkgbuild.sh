@@ -7,7 +7,7 @@ export PACKAGER="https://travis-ci.org/${1}/builds/${2}"
 export AURDEST="$(pwd)/src"
 
 # Variables declaration.
-declare -r pkgrepo="${1#*/}"
+declare -r pkgrepo="$3"
 declare -a pkglist=()
 declare -a pkgkeys=()
 declare -a pkgdeps=()
