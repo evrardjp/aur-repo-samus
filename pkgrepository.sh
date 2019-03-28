@@ -5,7 +5,7 @@ set -ex
 # Variables declaration.
 declare -r pkgslug="$1"
 declare -r pkgtag="$2"
-declare -r pkgrepo="${1#*/}"
+declare -r pkgrepo="$3"
 
 # Download or create repository database.
 cd "bin"
