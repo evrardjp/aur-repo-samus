@@ -25,4 +25,4 @@ deploy:
   overwrite: true
   skip_cleanup: true
   on:
-    branch: desktop
+    branch: desktop-branch
