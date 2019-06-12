@@ -1,2 +1,4 @@
 # Velero (Heptio Ark) backup
 velero-bin
+# Argo CD cli
+argocd-bin
