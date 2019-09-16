@@ -2,3 +2,10 @@
 velero-bin
 # Argo CD cli
 argocd-bin
+# logging
+kail
+kubetail
+stern-bin
+# other clis
+kube-shell
+kubeval-bin
