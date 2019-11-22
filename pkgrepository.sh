@@ -45,6 +45,6 @@ Include = /etc/pacman.d/${pkgrepo}
 EOF
 
 # Sync repositories and install aurutils.
-sudo pacman -Sy --noconfirm aurutils
+sudo pacman -Syu --noconfirm aurutils
 
 { set +ex; } 2>/dev/null
