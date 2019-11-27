@@ -1,3 +1,4 @@
+dist: bionic
 language: generic
 env:
   - TRAVIS_TAG=repository
