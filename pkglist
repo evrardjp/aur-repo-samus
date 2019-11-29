@@ -9,3 +9,9 @@ stern-bin
 # other clis
 kube-shell
 kubeval-bin
+# Spawn using terraform
+terraform-provider-openstack
+terraform-provider-libvirt
+tflint-bin
+# other commands
+conftest
