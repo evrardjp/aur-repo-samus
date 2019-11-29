@@ -1,0 +1,7 @@
+# gh-pages branch ignored files
+_site
+.bundle
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+Gemfile.lock
