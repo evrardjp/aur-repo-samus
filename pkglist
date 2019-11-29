@@ -13,5 +13,6 @@ kubeval-bin
 #terraform-provider-openstack
 terraform-provider-libvirt
 tflint-bin
+terraform11
 # other commands
 conftest
