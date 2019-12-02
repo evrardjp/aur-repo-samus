@@ -38,6 +38,8 @@ for pkgkey in ${pkgkeys[@]}; do
 done
 
 # Build outdated packages.
-aur sync -d $pkgrepo --root "${HOME}/bin" -n ${pkglist[@]}
+if (( ${#pkglist[@]} )); then
+  aur sync -d $pkgrepo --root "${HOME}/bin" -n ${pkglist[@]}
+fi
 
 { set +ex; } 2>/dev/null
