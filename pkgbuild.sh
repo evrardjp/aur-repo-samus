@@ -3,7 +3,12 @@
 set -ex
 
 # Environment variables.
-export PACKAGER="https://travis-ci.org/${1}/builds/${2}"
+if [ ! -f "/home/pkguser/.makepkg.conf" ]; then
+  echo "No makepkg.conf found, exporting PACKAGER variable."
+  export PACKAGER="${1/\// } <${2}@${3}.build.id>"
+else
+  echo "/home/pkguser/.makepkg.conf found, ensure that the PACKAGER variable is set there."
+fi
 export AURDEST="$(pwd)/src"
 
 # Variables declaration.
