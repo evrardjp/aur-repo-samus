@@ -3,11 +3,10 @@
 set -ex
 
 # Environment variables.
-if [ ! -f "/home/pkguser/.makepkg.conf" ]; then
-  echo "No makepkg.conf found, exporting PACKAGER variable."
-  export PACKAGER="${1/\// } <${2}@${3}.build.id>"
-else
-  echo "/home/pkguser/.makepkg.conf found, ensure that the PACKAGER variable is set there."
+makepkg_conf="/home/pkguser/.makepkg.conf"
+if [ ! -f ${makepkg_conf} ] || ! $(grep -Fxq "PACKAGER" ${makepkg_conf}) ; then
+# echo "No makepkg.conf or no PACKAGER variable found: exporting it..."
+  export PACKAGER="${1/\// } <${2}@travis.build.id>"
 fi
 export AURDEST="$(pwd)/src"
 
