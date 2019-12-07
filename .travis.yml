@@ -10,6 +10,9 @@ before_install:
 install:
   - docker cp pkgrepository.sh aurci:/home/pkguser
   - docker cp pkgbuild.sh aurci:/home/pkguser
+  - if [ -f makepkg.conf ]; then
+      docker cp makepkg.conf aurci:/home/pkguser/.makepkg.conf;
+    fi
 before_script:
   - docker cp pkglist aurci:/home/pkguser
   - docker cp pkgkeys aurci:/home/pkguser
