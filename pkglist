@@ -4,3 +4,6 @@ signal-desktop-bin
 spotify-dev
 git-repo
 octant-bin
+bitwarden_rs
+bitwarden-cli-bin
+bitwarden
