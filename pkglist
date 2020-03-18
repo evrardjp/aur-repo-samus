@@ -3,4 +3,5 @@ rocketchat-client-bin
 signal-desktop-bin
 spotify-dev
 git-repo
-octant-bin
+octant
+teams
